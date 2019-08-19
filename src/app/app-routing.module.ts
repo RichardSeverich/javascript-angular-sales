@@ -6,10 +6,10 @@ import { EditarComponent } from 'src/app/componentes/usuario/editar/editar.compo
 import { EliminarComponent } from 'src/app/componentes/usuario/eliminar/eliminar.component';
 
 const routes: Routes = [
-  {path: 'usuarioMostrar', component:MostrarComponent},
-  {path: 'usuarioCrear', component:CrearComponent},
-  {path: 'usuarioEditar', component:EditarComponent},
-  {path: 'usuarioEliminar', component:EliminarComponent}
+  {path: 'usuario-mostrar', component:MostrarComponent},
+  {path: 'usuario-crear', component:CrearComponent},
+  {path: 'usuario-editar', component:EditarComponent},
+  {path: 'usuario-eliminar', component:EliminarComponent}
 ];
 
 @NgModule({

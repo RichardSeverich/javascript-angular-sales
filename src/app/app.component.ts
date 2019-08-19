@@ -12,10 +12,10 @@ export class AppComponent {
   constructor(private router:Router){}
 
   usuarioMostrar(){
-    this.router.navigate(["usuarioMostrar"]);
+    this.router.navigate(["usuario-mostrar"]);
   }
   usuarioCrear(){
-    this.router.navigate(["usuarioCrear"]);
+    this.router.navigate(["usuario-crear"]);
   }
 
 }

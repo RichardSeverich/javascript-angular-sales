@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MostrarComponent } from 'src/app/componentes/usuario/mostrar/mostrar.component';
-import { CrearComponent } from 'src/app/componentes/usuario/crear/crear.component';
-import { EditarComponent } from 'src/app/componentes/usuario/editar/editar.component';
-import { EliminarComponent } from 'src/app/componentes/usuario/eliminar/eliminar.component';
+
+import { UsuarioMostrarComponent } from 'src/app/componentes/usuario/usuario-mostrar/usuario-mostrar.component';
+import { UsuarioCrearComponent } from 'src/app/componentes/usuario/usuario-crear/usuario-crear.component';
+import { UsuarioEditarComponent } from 'src/app/componentes/usuario/usuario-editar/usuario-editar.component';
+import { UsuarioEliminarComponent } from 'src/app/componentes/usuario/usuario-eliminar/usuario-eliminar.component';
+
 
 const routes: Routes = [
-  {path: 'usuario-mostrar', component:MostrarComponent},
-  {path: 'usuario-crear', component:CrearComponent},
-  {path: 'usuario-editar', component:EditarComponent},
-  {path: 'usuario-eliminar', component:EliminarComponent}
+  {path: 'usuario-mostrar', component:UsuarioMostrarComponent},
+  {path: 'usuario-crear', component:UsuarioCrearComponent},
+  {path: 'usuario-editar', component:UsuarioEditarComponent},
+  {path: 'usuario-eliminar', component:UsuarioEliminarComponent}
 ];
 
 @NgModule({

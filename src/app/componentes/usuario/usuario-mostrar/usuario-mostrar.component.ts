@@ -16,12 +16,12 @@ export class UsuarioMostrarComponent implements OnInit {
 
   arrayUsers:User[];
   
- // constructor(private service:UsuarioMostrarService, private router:Route) { }
+  constructor(private service:UsuarioMostrarService) { }
   
   ngOnInit() {
-    /*this.service.getUser().subscribe(data=> {
+    this.service.getUser().subscribe(data=> {
       this.arrayUsers = data;
-    })*/
+    })
   }
 
 }

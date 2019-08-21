@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-
 import { UsuarioMostrarComponent } from './componentes/usuario/usuario-mostrar/usuario-mostrar.component';
 import { UsuarioCrearComponent } from './componentes/usuario/usuario-crear/usuario-crear.component';
 import { UsuarioEditarComponent } from './componentes/usuario/usuario-editar/usuario-editar.component';

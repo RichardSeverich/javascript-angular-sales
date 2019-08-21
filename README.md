@@ -1,6 +1,16 @@
 # JavascriptAngularSales
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
+
+## Prerequisites  🚀
+1. Install Windows 10
+2. Install node.js version 10.16.3
+3. Install npm version 6.9.0
+4. Install angular-cli version 7.3.9.
+
+## Installation 🔧
+1. Clone Repository: https://stash.pros.com/projects/OND/repos/rm-nightwatch/browse
+2. Install Dependencies: npm install
 
 ## Development server
 
@@ -25,3 +35,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Contributing 🖇️
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b issue/1001`
+3. Commit your changes: `git commit -m 'issue/1001: Add some feature'`
+4. Push to the branch: `git push origin issue/1001`
+5. Submit a pull request.
+
+## License 📄
+* Copyright (c) 2019 by Easy-Code, Inc.  All Rights Reserved.
+* This software is the confidential and proprietary information of
+* Easy-Code, Inc. ("Confidential Information").
+* You may not disclose such Confidential Information, and may only
+* use such Confidential Information in accordance with the terms of
+* the license agreement you entered into with Easy-Code.

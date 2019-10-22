@@ -5,8 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Prerequisites  🚀
 1. Install Windows 10
 2. Install node.js version 10.16.3
-3. Install npm version 6.9.0
-4. Install angular-cli version 7.3.9.
+3. (No mandatory) Install npm version 6.9.0
+4. (No mandatory) Install angular-cli version 7.3.9.
+5. Install google Chrome 64 Bits Version 64.0
+6. Install "Allow CORS: Access-Control-Allow-Origin" Plugin for Chrome.
+7. Install "Augury" Plugin for Chrome.
 
 ## Installation 🔧
 1. Clone Repository: https://stash.pros.com/projects/OND/repos/rm-nightwatch/browse

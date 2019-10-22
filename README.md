@@ -14,6 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Installation 🔧
 1. Clone Repository: https://stash.pros.com/projects/OND/repos/rm-nightwatch/browse
 2. Install Dependencies: npm install
+3. Set the api host and port to: src/environments/environment.ts
 
 ## Development server
 

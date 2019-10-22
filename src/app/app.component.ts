@@ -18,4 +18,11 @@ export class AppComponent {
     this.router.navigate(["usuario-crear"]);
   }
 
+  itemMostrar(){
+    this.router.navigate(["item-mostrar"]);
+  }
+  itemCrear(){
+    this.router.navigate(["item-crear"]);
+  }
+
 }

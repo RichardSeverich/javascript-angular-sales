@@ -5,12 +5,21 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+// Components
+// User Components
 import { UsuarioMostrarComponent } from './componentes/usuario/usuario-mostrar/usuario-mostrar.component';
 import { UsuarioCrearComponent } from './componentes/usuario/usuario-crear/usuario-crear.component';
 import { UsuarioEditarComponent } from './componentes/usuario/usuario-editar/usuario-editar.component';
 import { UsuarioEliminarComponent } from './componentes/usuario/usuario-eliminar/usuario-eliminar.component';
+// Item Components
+import { ItemMostrarComponent } from './componentes/item/item-mostrar/item-mostrar.component';
+import { ItemCrearComponent } from './componentes/item/item-crear/item-crear.component';
+
+// Import Services
 import { UsuarioMostrarService } from './servicios/usuario/usuario-mostrar.service';
+import { ItemMostrarService } from './servicios/item/item-mostrar.service';
+
+
 
 
 @NgModule({
@@ -20,6 +29,8 @@ import { UsuarioMostrarService } from './servicios/usuario/usuario-mostrar.servi
     UsuarioCrearComponent,
     UsuarioEditarComponent,
     UsuarioEliminarComponent,
+    ItemMostrarComponent,
+    ItemCrearComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +38,10 @@ import { UsuarioMostrarService } from './servicios/usuario/usuario-mostrar.servi
     FormsModule,
     HttpClientModule
   ],
-  providers: [UsuarioMostrarService],
+  providers: [
+    UsuarioMostrarService,
+    ItemMostrarService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

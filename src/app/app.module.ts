@@ -14,12 +14,13 @@ import { UsuarioEliminarComponent } from './componentes/usuario/usuario-eliminar
 // Item Components
 import { ItemMostrarComponent } from './componentes/item/item-mostrar/item-mostrar.component';
 import { ItemCrearComponent } from './componentes/item/item-crear/item-crear.component';
-
+// VentaComponents
+import { VentaMostrarComponent } from './componentes/venta/venta-mostrar/venta-mostrar.component';
+import { VentaCrearComponent } from './componentes/venta/venta-crear/venta-crear.component';
 // Import Services
 import { UsuarioMostrarService } from './servicios/usuario/usuario-mostrar.service';
 import { ItemMostrarService } from './servicios/item/item-mostrar.service';
-
-
+import { VentaMostrarService } from 'src/app/servicios/venta/venta-mostrar.service';
 
 
 @NgModule({
@@ -31,6 +32,8 @@ import { ItemMostrarService } from './servicios/item/item-mostrar.service';
     UsuarioEliminarComponent,
     ItemMostrarComponent,
     ItemCrearComponent,
+    VentaMostrarComponent,
+    VentaCrearComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { ItemMostrarService } from './servicios/item/item-mostrar.service';
   ],
   providers: [
     UsuarioMostrarService,
-    ItemMostrarService
+    ItemMostrarService,
+    VentaMostrarService
   ],
   bootstrap: [AppComponent]
 })

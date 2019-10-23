@@ -9,6 +9,9 @@ import { UsuarioEliminarComponent } from 'src/app/componentes/usuario/usuario-el
 // Item components
 import { ItemMostrarComponent } from 'src/app/componentes/item/item-mostrar/item-mostrar.component';
 import { ItemCrearComponent } from 'src/app/componentes/item/item-crear/item-crear.component';
+// Venta components
+import { VentaMostrarComponent } from 'src/app/componentes/venta/venta-mostrar/venta-mostrar.component';
+import { VentaCrearComponent } from 'src/app/componentes/venta/venta-crear/venta-crear.component';
 
 const routes: Routes = [
   {path: 'usuario-mostrar', component:UsuarioMostrarComponent},
@@ -17,6 +20,8 @@ const routes: Routes = [
   {path: 'usuario-eliminar', component:UsuarioEliminarComponent},
   {path: 'item-mostrar', component:ItemMostrarComponent},
   {path: 'item-crear', component:ItemCrearComponent},
+  {path: 'venta-mostrar', component:VentaMostrarComponent},
+  {path: 'venta-crear', component:VentaCrearComponent},
 ];
 
 @NgModule({

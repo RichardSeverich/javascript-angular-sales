@@ -31,10 +31,20 @@
             Adm. Ventas
           </button>
           <div class="dropdown-menu dropdown-menu-right">
-            <button  class="dropdown-item" type="button">Mostrar</button>
-            <button  class="dropdown-item" type="button">Crear</button>
+            <button  (click)="ventaMostrar()" class="dropdown-item" type="button">Mostrar</button>
+            <button  (click)="ventaCrear()" class="dropdown-item" type="button">Crear</button>
           </div>
       </div>
+
+      <div class="btn-group">
+        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Adm. Ventas - Items
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <button  class="dropdown-item" type="button">Mostrar</button>
+          <button  class="dropdown-item" type="button">Crear</button>
+        </div>
+    </div>
     </ul>
     <ul class="navbar-nav ml-auto">
         <div class="btn-group">
@@ -42,8 +52,9 @@
               Opciones
             </button>
             <div class="dropdown-menu dropdown-menu-right">
-              <button  class="dropdown-item" type="button">Configuracion General del Sistema</button>
-              <button  class="dropdown-item" type="button">Configuracion Parametros del Sistema</button>
+              <button  class="dropdown-item" type="button">Conf Gral Sistema</button>
+              <button  class="dropdown-item" type="button">Conf Parametros Sistema</button>
+              <button  class="dropdown-item" type="button">Salir</button>
             </div>
         </div>
     </ul>

@@ -24,5 +24,11 @@ export class AppComponent {
   itemCrear(){
     this.router.navigate(["item-crear"]);
   }
+  ventaMostrar(){
+    this.router.navigate(["venta-mostrar"]);
+  }
+  ventaCrear(){
+    this.router.navigate(["venta-crear"]);
+  }
 
 }

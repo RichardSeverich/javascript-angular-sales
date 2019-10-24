@@ -12,8 +12,11 @@ import { ItemCrearComponent } from 'src/app/componentes/item/item-crear/item-cre
 // Venta components
 import { VentaMostrarComponent } from 'src/app/componentes/venta/venta-mostrar/venta-mostrar.component';
 import { VentaCrearComponent } from 'src/app/componentes/venta/venta-crear/venta-crear.component';
+// Login
+import { LoginComponent } from 'src/app/componentes/login/login.component';
 
 const routes: Routes = [
+  {path: '', component:LoginComponent},
   {path: 'usuario-mostrar', component:UsuarioMostrarComponent},
   {path: 'usuario-crear', component:UsuarioCrearComponent},
   {path: 'usuario-editar', component:UsuarioEditarComponent},

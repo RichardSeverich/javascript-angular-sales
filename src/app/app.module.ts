@@ -21,11 +21,14 @@ import { VentaCrearComponent } from './componentes/venta/venta-crear/venta-crear
 import { UsuarioMostrarService } from './servicios/usuario/usuario-mostrar.service';
 import { ItemMostrarService } from './servicios/item/item-mostrar.service';
 import { VentaMostrarService } from 'src/app/servicios/venta/venta-mostrar.service';
+import { LoginComponent } from './componentes/login/login.component';
+import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     UsuarioMostrarComponent,
     UsuarioCrearComponent,
     UsuarioEditarComponent,
@@ -34,6 +37,7 @@ import { VentaMostrarService } from 'src/app/servicios/venta/venta-mostrar.servi
     ItemCrearComponent,
     VentaMostrarComponent,
     VentaCrearComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,25 +10,9 @@ export class AppComponent {
   title = 'javascript-angular-sales';
 
   constructor(private router:Router){}
-
-  usuarioMostrar(){
-    this.router.navigate(["usuario-mostrar"]);
-  }
-  usuarioCrear(){
-    this.router.navigate(["usuario-crear"]);
-  }
-
-  itemMostrar(){
-    this.router.navigate(["item-mostrar"]);
-  }
-  itemCrear(){
-    this.router.navigate(["item-crear"]);
-  }
-  ventaMostrar(){
-    this.router.navigate(["venta-mostrar"]);
-  }
-  ventaCrear(){
-    this.router.navigate(["venta-crear"]);
+  
+  Login(){
+    this.router.navigate(["login"]);
   }
 
 }

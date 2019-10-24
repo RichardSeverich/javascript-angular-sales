@@ -4,7 +4,7 @@
 <div class="container col-md-3">
   <div class="card">
       <div class="card-header">
-        <h3>
+        <h3 align="center">
           Usuarios
         </h3>
       </div>
@@ -46,8 +46,10 @@
                   <option value = "client">Cliente</option>
                 </select>
           </div>
-          <button (click)="usuarioCrear()" class="btn btn-info" style="margin-left: 24px">Crear</button>
-          <button (click)="usuarioCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
+          <div class="text-center">
+            <button (click)="usuarioCrear()" class="btn btn-info">Crear</button>
+            <button (click)="usuarioCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
+          </div>
         </form>
       </div>
   </div>

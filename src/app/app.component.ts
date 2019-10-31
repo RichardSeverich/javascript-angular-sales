@@ -10,9 +10,5 @@ export class AppComponent {
   title = 'javascript-angular-sales';
 
   constructor(private router:Router){}
-  
-  Login(){
-    this.router.navigate(["login"]);
-  }
 
 }

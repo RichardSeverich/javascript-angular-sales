@@ -13,24 +13,30 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  usuarioMostrar(){
+  navigateUsuarioMostrar(){
     this.router.navigate(["usuario-mostrar"]);
   }
-  usuarioCrear(){
+  navigateUsuarioCrear(){
     this.router.navigate(["usuario-crear"]);
   }
 
-  itemMostrar(){
+  navigateItemMostrar(){
     this.router.navigate(["item-mostrar"]);
   }
-  itemCrear(){
+  navigateItemCrear(){
     this.router.navigate(["item-crear"]);
   }
-  ventaMostrar(){
+  navigateVentaMostrar(){
     this.router.navigate(["venta-mostrar"]);
   }
-  ventaCrear(){
+  navigateVentaCrear(){
     this.router.navigate(["venta-crear"]);
+  }
+  navigateDashboard(){
+    this.router.navigate(["nav-bar"]);
+  }
+  navigateLoginPage(){
+    this.router.navigate(["login"]);
   }
 
 }

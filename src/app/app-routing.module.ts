@@ -14,6 +14,7 @@ import { VentaMostrarComponent } from 'src/app/componentes/venta/venta-mostrar/v
 import { VentaCrearComponent } from 'src/app/componentes/venta/venta-crear/venta-crear.component';
 // Login
 import { LoginComponent } from 'src/app/componentes/login/login.component';
+import { NavBarComponent } from 'src/app/componentes/nav-bar/nav-bar.component';
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
@@ -25,6 +26,8 @@ const routes: Routes = [
   {path: 'item-crear', component:ItemCrearComponent},
   {path: 'venta-mostrar', component:VentaMostrarComponent},
   {path: 'venta-crear', component:VentaCrearComponent},
+  {path: 'nav-bar', component:NavBarComponent},
+  {path: 'login', component:LoginComponent}
 ];
 
 @NgModule({

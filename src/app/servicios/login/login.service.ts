@@ -14,7 +14,6 @@ export class LoginService {
   Url=environment.apiUrl + '/api/v1/users/'
   
   getUserById(id){
-    this.Url = this.Url + id;
-    return this.http.get<UserResponse>(this.Url)
+    return this.http.get<UserResponse>(this.Url + id)
   }
 }

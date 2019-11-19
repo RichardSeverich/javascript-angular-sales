@@ -21,19 +21,32 @@ export class LoginComponent implements OnInit {
   }
 
   navigateDashboard(username, password){
+    if(username!="" && password!=""){
+     this._userAuthentication(username, password);
+    } else {
+      alert(this.message);
+    }
+  }
+
+  _userAuthentication(username, password){
     this.service.getUserById(username).subscribe(
       response => {
         this.userResponse = response;
         this.arrayUsers = this.userResponse.data;
-        for (let user of this.arrayUsers) {
-          if(user.id==username &&  user.password==password){
-            this.router.navigate(["nav-bar"]);
-          } else {
-            alert(this.message);
-          }
-        }
+        this._userValidation(username, password);
       },
       error => alert(this.message)
     );
   }
+
+  _userValidation(username, password){
+    for (let user of this.arrayUsers) {
+      if(user.id==username &&  user.password==password){
+        this.router.navigate(["nav-bar"]);
+      } else {
+        alert(this.message);
+      }
+    }
+  }
+
 }

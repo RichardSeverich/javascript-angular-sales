@@ -43,8 +43,7 @@ export class UsuarioCrearComponent implements OnInit {
           console.log(this.userResponse.textMessage);
           alert(this.userResponse.textMessage)
         } else if (error.error.errors != undefined){
-          alert(this.errorValidation)
-          let validationMessage = "";
+          let validationMessage = this.errorValidation + "\n";
           for (let x=0;x<error.error.errors.length;x++){
             validationMessage = validationMessage + error.error.errors[x].field + " ";
             validationMessage = validationMessage + error.error.errors[x].defaultMessage + "\n";
@@ -57,7 +56,7 @@ export class UsuarioCrearComponent implements OnInit {
     )
   }
 
-  usuarioCancelar(user:User){
+  usuarioCancelar(){
     this.router.navigate(["usuario-mostrar"])
   }
 

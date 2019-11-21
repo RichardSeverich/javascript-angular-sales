@@ -13,19 +13,19 @@
         <form action="">
           <div class="form-group">
               <label for="">Id Vendedor</label>
-              <input type="text" class="form-control">
+              <input #idSeller type="text" class="form-control" maxlength="7">
           </div>
           <div class="form-group">
               <label for="">Id Cliente</label>
-              <input type="text" class="form-control">
+              <input #idClient type="text" class="form-control" maxlength="7">
           </div>
           <div class="form-group">
               <label for="">Fecha de venta</label>
-              <input type="date" class="form-control">
+              <input #date type="date" class="form-control">
           </div>
           <div class="text-center">
-            <button (click)="usuarioCrear()" class="btn btn-info" style="margin-left: 24px">Crear</button>
-            <button (click)="usuarioCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
+            <button (click)="ventaCrear(idSeller.value, idClient.value, date.value)" class="btn btn-info" style="margin-left: 24px">Crear</button>
+            <button (click)="ventaCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
           </div>
         </form>
       </div>

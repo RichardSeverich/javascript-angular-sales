@@ -13,7 +13,7 @@ export class UsuarioCrearComponent implements OnInit {
 
   user:User;
   userResponse:UserResponse;
-  message="user or password incorrect";
+  errorValidation="Error, validation error";
   errorMessage="Error, please contact your administrator";
 
   constructor(private router:Router, private service:UsuarioCrearService) { }
@@ -42,6 +42,14 @@ export class UsuarioCrearComponent implements OnInit {
         if (this.userResponse.textMessage != undefined){
           console.log(this.userResponse.textMessage);
           alert(this.userResponse.textMessage)
+        } else if (error.error.errors != undefined){
+          alert(this.errorValidation)
+          let validationMessage = "";
+          for (let x=0;x<error.error.errors.length;x++){
+            validationMessage = validationMessage + error.error.errors[x].field + " ";
+            validationMessage = validationMessage + error.error.errors[x].defaultMessage + "\n";
+          }
+          alert(validationMessage)
         } else {
           alert(this.errorMessage)
         }

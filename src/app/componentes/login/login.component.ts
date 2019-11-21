@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   arrayUsers:User[];
   userResponse:UserResponse;
   message="user or password incorrect";
+  errorMessage="Error, please contact your administrator";
 
   ngOnInit() {
   }
@@ -31,11 +32,22 @@ export class LoginComponent implements OnInit {
   _userAuthentication(username, password){
     this.service.getUserById(username).subscribe(
       response => {
+        console.log(response);
         this.userResponse = response;
         this.arrayUsers = this.userResponse.data;
         this._userValidation(username, password);
       },
-      error => alert(this.message)
+      error => {
+        console.log(error);
+        this.userResponse = error.error;
+        if (this.userResponse.textMessage != undefined){
+          console.log(this.userResponse.textMessage);
+          alert(this.message)
+        } else {
+          alert(this.errorMessage)
+          
+        }
+      }
     );
   }
 

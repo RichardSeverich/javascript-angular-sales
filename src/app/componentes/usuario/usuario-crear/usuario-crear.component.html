@@ -13,38 +13,41 @@
         <form action="">
           <div class="form-group">
             <label for="">Id</label>
-            <input type="text" class="form-control" maxlength="7">
+            <input #id type="text" class="form-control" maxlength="7">
           </div>
           <div class="form-group">
               <label for="">Contraseña</label>
-              <input type="password" class="form-control" minlength="3" maxlength="10">
+              <input #password type="password" class="form-control" minlength="3" maxlength="10">
           </div>
           <div class="form-group">
               <label for="">Nombres</label>
-              <input type="text" class="form-control" minlength="3" maxlength="24">
+              <input #name type="text" class="form-control" minlength="3" maxlength="10">
           </div>
           <div class="form-group">
               <label for="">Apellidos</label>
-              <input type="text" class="form-control" minlength="3" maxlength="24">
+              <input #lastName type="text" class="form-control" minlength="3" maxlength="10">
           </div>
           <div class="form-group">
               <label for="">Fecha nacimiento</label>
-              <input type="date" class="form-control">
+              <input #birthDate type="date" class="form-control">
           </div>
           <div class="form-group">
               <label for="">Correo</label>
-              <input type="text" class="form-control" maxlength="30">
+              <input #email type="text" class="form-control" maxlength="30">
           </div>
           <div class="form-group">
               <label for="">Tipo</label>
-              <select class="custom-select custom-select-sm">
+              <select #type class="custom-select custom-select-sm">
                   <option value = "admin">Administrador</option>
                   <option value = "seller">Vendedor</option>
                   <option value = "client">Cliente</option>
-                </select>
+              </select>
           </div>
           <div class="text-center">
-            <button (click)="usuarioCrear()" class="btn btn-info">Crear</button>
+            <button 
+              (click)="usuarioCrear(id.value, password.value, name.value, lastName.value, birthDate.value, email.value, type.value)" 
+              class="btn btn-info">Crear
+            </button>
             <button (click)="usuarioCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
           </div>
         </form>

@@ -36,7 +36,7 @@ export class VentaItemMostrarComponent implements OnInit {
   ventaTotal:number;
   
   constructor(private router:Router, 
-    private service:VentaItemMostrarService, 
+    private serviceVentaItem:VentaItemMostrarService, 
     private serviceItem:ItemMostrarService) { }
 
   ngOnInit() {
@@ -53,17 +53,17 @@ export class VentaItemMostrarComponent implements OnInit {
   }
 
   getVentaItem(ventaId){
-    this.service.getVentaItem().subscribe( response => {
+    this.serviceVentaItem.getVentaItem().subscribe( response => {
       console.log(response);
       this.ventaItemResponse = response;
-      let arrayAux = <any>response.data;
+      let arrayAuxVentaItem = <any>response.data;
       // Get VentasItems Filtrado.
-      arrayAux = arrayAux.filter(obj => obj.idSale == ventaId);
-      this.arrayVentasItems = arrayAux.filter(obj => obj.idSale == ventaId);
+      arrayAuxVentaItem = arrayAuxVentaItem.filter(obj => obj.idSale == ventaId);
+      this.arrayVentasItems = arrayAuxVentaItem.filter(obj => obj.idSale == ventaId);
       // Build Details Sales
       let index = 0;
       var arrayAuxDetalles = [];
-      arrayAux.forEach(element => {
+      arrayAuxVentaItem.forEach(element => {
         this.buildDetalleVentas(element, arrayAuxDetalles, index);
         index++;
       });
@@ -72,7 +72,7 @@ export class VentaItemMostrarComponent implements OnInit {
   }
 
   buildDetalleVentas(element, arrayAuxDetalles, index){
-    this.serviceItem.getItemById(element.id).subscribe( 
+    this.serviceItem.getItemById(element.idItem).subscribe(
       response => {
         this.itemResponse = response;
         this.arrayItems = this.itemResponse.data;

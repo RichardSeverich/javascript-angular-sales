@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ItemResponse } from 'src/app/modelos/ItemResponse';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ItemEliminarService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+  
+  Url=environment.apiUrl + '/api/v1/items/'
+  
+  deleteItem(id){
+    return this.http.delete<ItemResponse>(this.Url + id)
+  }
 }

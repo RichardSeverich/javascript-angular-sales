@@ -21,6 +21,7 @@ import { VentaCrearComponent } from './componentes/venta/venta-crear/venta-crear
 import { UsuarioMostrarService } from './servicios/usuario/usuario-mostrar.service';
 import { UsuarioEliminarService } from './servicios/usuario/usuario-eliminar.service';
 import { ItemMostrarService } from './servicios/item/item-mostrar.service';
+import { ItemEliminarService } from './servicios/item/item-eliminar.service';
 import { VentaMostrarService } from 'src/app/servicios/venta/venta-mostrar.service';
 import { VentaItemCrearService } from 'src/app/servicios/venta-item/venta-item-crear.service';
 import { LoginComponent } from './componentes/login/login.component';
@@ -55,6 +56,7 @@ import { VentaItemCrearComponent } from './componentes/venta-item/venta-item-cre
     UsuarioMostrarService,
     UsuarioEliminarService,
     ItemMostrarService,
+    ItemEliminarService,
     VentaMostrarService,
     VentaItemCrearService
   ],

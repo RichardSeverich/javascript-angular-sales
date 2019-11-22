@@ -68,6 +68,6 @@ export class UsuarioMostrarComponent implements OnInit {
 
   pageRefresh() {
     location.reload();
- }
+  }
 
 }

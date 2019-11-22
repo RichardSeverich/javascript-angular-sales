@@ -1,13 +1,16 @@
 <app-nav-bar></app-nav-bar>
 <p>
-  venta-mostrar works!
+  venta-item-mostrar works!
 </p>
 <div class="container">
   <div class="card">
       <div class="card-header">
         <h3 align="center">
-          Ventas
+          Ventas - Items
         </h3>
+        <h6 align="center">
+          Vendedor: {{ventaIdSeller}} --- Cliente: {{ventaIdClient}} --- Fecha: {{ventaDate}}
+        </h6>
       </div>
       <div class="card-body">
           <table class="table table-hover">
@@ -15,17 +18,16 @@
               <tr class="text-center">
                 <th>Id</th>
                 <th>Id Vendedor</th>
-                <th>Id Cliente</th>
-                <th>Fecha</th>
+                <th>Id Item</th>
+                <th>Cantidad</th>
               </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let venta of arrayVentas" class="text-center">
-                  <td>{{venta.id}}</td>
-                  <td>{{venta.idSeller}}</td>
-                  <td>{{venta.idClient}}</td>
-                  <td>{{venta.date}}</td>
-                  <td> <button (click)="navigateVentaItemMostrar(venta)" class="btn btn-success">Detalle</button> </td>
+                <tr *ngFor="let ventaVentaItem of arrayVentasItems" class="text-center">
+                  <td>{{ventaVentaItem.id}}</td>
+                  <td>{{ventaVentaItem.idSale}}</td>
+                  <td>{{ventaVentaItem.idItem}}</td>
+                  <td>{{ventaVentaItem.quantity}}</td>
                   <td> <button class="btn btn-info">Editar</button> </td>
                   <td> <button class="btn btn-warning">Eliminar</button> </td>
                 </tr>

@@ -23,6 +23,8 @@ import { ItemMostrarService } from './servicios/item/item-mostrar.service';
 import { VentaMostrarService } from 'src/app/servicios/venta/venta-mostrar.service';
 import { LoginComponent } from './componentes/login/login.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
+import { VentaItemMostrarComponent } from './componentes/venta-item/venta-item-mostrar/venta-item-mostrar.component';
+import { VentaItemCrearComponent } from './componentes/venta-item/venta-item-crear/venta-item-crear.component';
 
 
 @NgModule({
@@ -38,6 +40,8 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
     VentaMostrarComponent,
     VentaCrearComponent,
     NavBarComponent,
+    VentaItemMostrarComponent,
+    VentaItemCrearComponent,
   ],
   imports: [
     BrowserModule,

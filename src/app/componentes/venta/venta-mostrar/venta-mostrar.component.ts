@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // Import Services
 import { VentaMostrarService } from 'src/app/servicios/venta/venta-mostrar.service';
 // Import Models
@@ -16,12 +17,20 @@ export class VentaMostrarComponent implements OnInit {
   arrayVentas:Venta[];
   ventaResponse:VentaResponse;
 
-  constructor(private service:VentaMostrarService) { }
+  constructor(private router:Router, private service:VentaMostrarService) { }
 
   ngOnInit() {
     this.service.getItem().subscribe( response => {
       this.ventaResponse = response;
       this.arrayVentas = this.ventaResponse.data;
     })
+  }
+
+  navigateVentaItemMostrar(venta:Venta): void{
+    localStorage.setItem("ventaId", ""+venta.id);
+    localStorage.setItem("ventaIdSeller", ""+venta.idSeller);
+    localStorage.setItem("ventaIdClient", ""+venta.idClient);
+    localStorage.setItem("ventaDate", ""+venta.date);
+    this.router.navigate(["venta-item-mostrar"]);
   }
 }

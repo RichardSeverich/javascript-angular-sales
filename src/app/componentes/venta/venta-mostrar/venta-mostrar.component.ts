@@ -27,6 +27,16 @@ export class VentaMostrarComponent implements OnInit {
   }
 
   navigateVentaItemMostrar(venta:Venta): void{
+    this.sendData(venta);
+    this.router.navigate(["venta-item-mostrar"]);
+  }
+
+  navigateVentaItemCrear(venta:Venta): void{
+    this.sendData(venta);
+    this.router.navigate(["venta-item-crear"]);
+  }
+
+  sendData(venta:Venta):void{
     localStorage.setItem("ventaId", ""+venta.id);
     localStorage.setItem("ventaIdSeller", ""+venta.idSeller);
     localStorage.setItem("ventaIdClient", ""+venta.idClient);

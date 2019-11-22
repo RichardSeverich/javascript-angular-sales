@@ -1,3 +1,54 @@
+<app-nav-bar></app-nav-bar>
 <p>
   venta-item-crear works!
 </p>
+<div class="container">
+  <div class="card">
+      <div class="card-header">
+        <h3 align="center">
+          Añadir Items
+        </h3>
+      </div>
+      <div class="card-body">
+          <table class="table table-hover table-borderless">
+              <thead>
+                <tr class="text-center">
+                    <th>Vendedor</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr class="text-center">
+                    <td>{{ventaIdSeller}}</td>
+                    <td>{{ventaIdClient}}</td>
+                    <td>{{ventaDate}}</td>
+                    <td width="30%">
+                      <input #ventaItemCantidad type="text" class="form-control" maxlength="4" value="1">
+                    </td>
+                  </tr>
+              </tbody>
+            </table> 
+          <table id="table-items" class="table table-hover">
+            <thead>
+              <tr class="text-center">
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of arrayItems" class="text-center">
+                  <td>{{item.id}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.price}}</td>
+                  <td>{{item.stock}}</td>
+                  <td> <button class="btn btn-success">Registrar</button> </td>
+                </tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+</div>

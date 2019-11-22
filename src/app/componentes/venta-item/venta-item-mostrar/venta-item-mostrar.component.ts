@@ -33,12 +33,14 @@ export class VentaItemMostrarComponent implements OnInit {
   ventaIdSeller:String;
   ventaIdClient:String;
   ventaDate:String;
+  ventaTotal:number;
   
   constructor(private router:Router, 
     private service:VentaItemMostrarService, 
     private serviceItem:ItemMostrarService) { }
 
   ngOnInit() {
+    this.ventaTotal = 0;
     this.loadData();
   }
 
@@ -83,6 +85,10 @@ export class VentaItemMostrarComponent implements OnInit {
         ventaItemDetalle.priceItem = this.item.price;
         ventaItemDetalle.quantity = element.quantity;
         arrayAuxDetalles[index] = ventaItemDetalle;
+        // Convert Number Price and Quantity
+        let priceItem = +ventaItemDetalle.priceItem; 
+        let quantityItem = +ventaItemDetalle.quantity;
+        this.ventaTotal = this.ventaTotal + priceItem*quantityItem;
       }
     )
 

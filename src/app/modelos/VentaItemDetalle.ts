@@ -2,7 +2,7 @@ export class VentaItemDetalle {
     id:String;
     idSale:String;
     idItem:String;
-    name:String;
-    price:String;
+    nameItem:String;
+    priceItem:String;
     quantity:String;
 }

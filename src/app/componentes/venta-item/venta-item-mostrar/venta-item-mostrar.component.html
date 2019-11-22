@@ -29,18 +29,22 @@
           <table class="table table-hover">
             <thead>
               <tr class="text-center">
-                <!--<th>Id</th>-->
+                <th>Id</th>
                 <th>Id Venta</th>
                 <th>Id Item</th>
+                <th>Nombre Item</th>
+                <th>Precio Item</th>
                 <th>Cantidad</th>
               </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let ventaVentaItem of arrayVentasItems" class="text-center">
-                  <!-- <td>{{ventaVentaItem.id}}</td> -->
-                  <td>{{ventaVentaItem.idSale}}</td>
-                  <td>{{ventaVentaItem.idItem}}</td>
-                  <td>{{ventaVentaItem.quantity}}</td>
+                <tr *ngFor="let detalle of arrayVentaItemDetalle" class="text-center">
+                  <td>{{detalle.id}}</td>
+                  <td>{{detalle.idSale}}</td>
+                  <td>{{detalle.idItem}}</td>
+                  <td>{{detalle.nameItem}}</td>
+                  <td>{{detalle.priceItem}}</td>
+                  <td>{{detalle.quantity}}</td>
                   <td> <button class="btn btn-warning">Editar</button> </td>
                   <td> <button class="btn btn-danger">Eliminar</button> </td>
                 </tr>

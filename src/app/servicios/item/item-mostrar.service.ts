@@ -15,4 +15,7 @@ export class ItemMostrarService {
   getItem(){
     return this.http.get<ItemResponse>(this.Url)
   }
+  getItemById(itemId){
+    return this.http.get<ItemResponse>(this.Url + "/" + itemId)
+  }
 }

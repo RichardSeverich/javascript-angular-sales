@@ -24,7 +24,10 @@
               <input #date type="date" class="form-control">
           </div>
           <div class="text-center">
-            <button (click)="ventaCrear(idSeller.value, idClient.value, date.value)" class="btn btn-info" style="margin-left: 24px">Crear</button>
+            <button (click)="ventaCrear(idSeller.value, idClient.value, date.value)" 
+              class="btn btn-success" style="margin-left: 24px">
+              Registrar
+            </button>
             <button (click)="ventaCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
           </div>
         </form>

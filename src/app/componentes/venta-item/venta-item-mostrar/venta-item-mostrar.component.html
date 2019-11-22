@@ -6,30 +6,43 @@
   <div class="card">
       <div class="card-header">
         <h3 align="center">
-          Ventas - Items
+          Detalle - Venta
         </h3>
-        <h6 align="center">
-          Vendedor: {{ventaIdSeller}} --- Cliente: {{ventaIdClient}} --- Fecha: {{ventaDate}}
-        </h6>
       </div>
       <div class="card-body">
+          <table class="table table-hover table-borderless">
+            <thead>
+              <tr class="text-center">
+                  <th>Vendedor</th>
+                  <th>Cliente</th>
+                  <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                  <td>{{ventaIdSeller}}</td>
+                  <td>{{ventaIdClient}}</td>
+                  <td>{{ventaDate}}</td>
+                </tr>
+            </tbody>
+          </table> 
           <table class="table table-hover">
             <thead>
               <tr class="text-center">
-                <th>Id</th>
-                <th>Id Vendedor</th>
+                <!--<th>Id</th>-->
+                <th>Id Venta</th>
                 <th>Id Item</th>
                 <th>Cantidad</th>
               </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let ventaVentaItem of arrayVentasItems" class="text-center">
-                  <td>{{ventaVentaItem.id}}</td>
+                  <!-- <td>{{ventaVentaItem.id}}</td> -->
                   <td>{{ventaVentaItem.idSale}}</td>
                   <td>{{ventaVentaItem.idItem}}</td>
                   <td>{{ventaVentaItem.quantity}}</td>
-                  <td> <button class="btn btn-info">Editar</button> </td>
-                  <td> <button class="btn btn-warning">Eliminar</button> </td>
+                  <td> <button class="btn btn-warning">Editar</button> </td>
+                  <td> <button class="btn btn-danger">Eliminar</button> </td>
                 </tr>
             </tbody>
           </table>

@@ -31,8 +31,8 @@
                   <td>{{user.birthDate}}</td>
                   <td>{{user.email}}</td>
                   <td>{{user.type}}</td>
-                  <td> <button class="btn btn-info">Editar</button> </td>
-                  <td> <button class="btn btn-warning">Eliminar</button> </td>
+                  <td> <button class="btn btn-warning">Editar</button> </td>
+                  <td> <button (click)="usuarioEliminar(user.id)" class="btn btn-danger">Eliminar</button> </td>
                 </tr>
             </tbody>
           </table>

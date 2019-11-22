@@ -24,7 +24,10 @@
               <input #stock type="text" class="form-control" maxlength="4">
           </div>
           <div class="text-center">
-            <button (click)="itemCrear(name.value, price.value, stock.value)" class="btn btn-info" style="margin-left: 24px">Crear</button>
+            <button (click)="itemCrear(name.value, price.value, stock.value)" 
+              class="btn btn-success" style="margin-left: 24px">
+              Registrar
+            </button>
             <button (click)="itemCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
           </div>
         </form>

@@ -25,7 +25,7 @@
                     <td>{{ventaIdClient}}</td>
                     <td>{{ventaDate}}</td>
                     <td width="30%">
-                      <input #ventaItemCantidad type="text" class="form-control" maxlength="4" value="1">
+                      <input #cantidad type="text" class="form-control" maxlength="4" value="1" style="text-align:center;">
                     </td>
                   </tr>
               </tbody>
@@ -45,7 +45,7 @@
                   <td>{{item.name}}</td>
                   <td>{{item.price}}</td>
                   <td>{{item.stock}}</td>
-                  <td> <button class="btn btn-success">Registrar</button> </td>
+                  <td> <button (click)="ventaItemCrear(item.id, cantidad.value)" class="btn btn-success">Registrar</button> </td>
                 </tr>
             </tbody>
           </table>

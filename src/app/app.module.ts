@@ -22,6 +22,7 @@ import { UsuarioMostrarService } from './servicios/usuario/usuario-mostrar.servi
 import { UsuarioEliminarService } from './servicios/usuario/usuario-eliminar.service';
 import { ItemMostrarService } from './servicios/item/item-mostrar.service';
 import { VentaMostrarService } from 'src/app/servicios/venta/venta-mostrar.service';
+import { VentaItemCrearService } from 'src/app/servicios/venta-item/venta-item-crear.service';
 import { LoginComponent } from './componentes/login/login.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { VentaItemMostrarComponent } from './componentes/venta-item/venta-item-mostrar/venta-item-mostrar.component';
@@ -54,7 +55,8 @@ import { VentaItemCrearComponent } from './componentes/venta-item/venta-item-cre
     UsuarioMostrarService,
     UsuarioEliminarService,
     ItemMostrarService,
-    VentaMostrarService
+    VentaMostrarService,
+    VentaItemCrearService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// Import Services
+// Services
 import { ItemMostrarService } from 'src/app/servicios/item/item-mostrar.service';
 import { ItemEliminarService } from 'src/app/servicios/item/item-eliminar.service';
-// Import Models
+// Models
 import { Item } from 'src/app/modelos/Item';
 import { ItemResponse } from 'src/app/modelos/ItemResponse';
 

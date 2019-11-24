@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { VentaResponse } from 'src/app/modelos/VentaResponse';
-import { Venta } from 'src/app/modelos/Venta';
+// Services
 import { VentaCrearService } from 'src/app/servicios/venta/venta-crear.service';
+// Models
+import { Venta } from 'src/app/modelos/Venta';
+import { VentaResponse } from 'src/app/modelos/VentaResponse';
+
 
 @Component({
   selector: 'app-venta-crear',

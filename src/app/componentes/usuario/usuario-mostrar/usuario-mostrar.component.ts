@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UsuarioMostrarService } from 'src/app/servicios/usuario/usuario-mostrar.service';
-import { UsuarioEliminarService } from 'src/app/servicios/usuario/usuario-eliminar.service';
-import { User } from 'src/app/modelos/User';
-import { UserResponse } from 'src/app/modelos/UserResponse';
 import { Inject } from '@angular/core';
 import { forwardRef } from '@angular/core';
 import { Location } from '@angular/common';
+// Services
+import { UsuarioMostrarService } from 'src/app/servicios/usuario/usuario-mostrar.service';
+import { UsuarioEliminarService } from 'src/app/servicios/usuario/usuario-eliminar.service';
+// Models
+import { User } from 'src/app/modelos/User';
+import { UserResponse } from 'src/app/modelos/UserResponse';
 
 
 @Component({

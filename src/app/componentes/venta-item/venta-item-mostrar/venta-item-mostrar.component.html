@@ -48,7 +48,7 @@
                   <td>{{detalle.priceItem}}</td>
                   <td>{{detalle.quantity}}</td>
                   <td> <button class="btn btn-warning">Editar</button> </td>
-                  <td> <button class="btn btn-danger">Eliminar</button> </td>
+                  <td> <button (click)="ventaItemEliminar(detalle.id)" class="btn btn-danger">Eliminar</button> </td>
                 </tr>
             </tbody>
           </table>

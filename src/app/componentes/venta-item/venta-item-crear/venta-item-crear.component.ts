@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// Import Services
+// Services
 import { ItemMostrarService } from 'src/app/servicios/item/item-mostrar.service';
 import { VentaItemCrearService } from 'src/app/servicios/venta-item/venta-item-crear.service';
-// Import Models
+// Models
 import { Item } from 'src/app/modelos/Item';
 import { VentaItem } from 'src/app/modelos/VentaItem';
 import { ItemResponse } from 'src/app/modelos/ItemResponse';

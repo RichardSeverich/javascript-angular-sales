@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { VentaItemResponse } from 'src/app/modelos/VentaItemResponse';
-import { VentaItemMostrarService } from 'src/app/servicios/venta-item/venta-item-mostrar.service';
+// Services
 import { ItemMostrarService } from 'src/app/servicios/item/item-mostrar.service';
-// Import Models
-import { VentaItem } from 'src/app/modelos/VentaItem';
+import { VentaItemMostrarService } from 'src/app/servicios/venta-item/venta-item-mostrar.service';
+import { VentaItemEliminarService } from 'src/app/servicios/venta-item/venta-item-eliminar.service';
+// Models
 import { Item } from 'src/app/modelos/Item';
-import { ItemResponse } from 'src/app/modelos/ItemResponse';
+import { VentaItem } from 'src/app/modelos/VentaItem';
 import { VentaItemDetalle } from 'src/app/modelos/VentaItemDetalle';
+import { ItemResponse } from 'src/app/modelos/ItemResponse';
+import { VentaItemResponse } from 'src/app/modelos/VentaItemResponse';
 
 
 @Component({
@@ -27,17 +29,19 @@ export class VentaItemMostrarComponent implements OnInit {
   arrayVentasItems:VentaItem[];
   arrayItems: Item[];
   arrayVentaItemDetalle:VentaItemDetalle[];
-
   // Declare Atributes Recived
   ventaId:String;
   ventaIdSeller:String;
   ventaIdClient:String;
   ventaDate:String;
   ventaTotal:number;
+  // Message Errors
+  errorMessage="Error, please contact your administrator";
   
   constructor(private router:Router, 
-    private serviceVentaItem:VentaItemMostrarService, 
-    private serviceItem:ItemMostrarService) { }
+    private serviceVentaItemMostrar:VentaItemMostrarService,
+    private serviceVentaItemEliminar:VentaItemEliminarService, 
+    private serviceItemMostrar:ItemMostrarService) { }
 
   ngOnInit() {
     this.ventaTotal = 0;
@@ -53,7 +57,7 @@ export class VentaItemMostrarComponent implements OnInit {
   }
 
   getVentaItem(ventaId){
-    this.serviceVentaItem.getVentaItem().subscribe( response => {
+    this.serviceVentaItemMostrar.getVentaItem().subscribe( response => {
       console.log(response);
       this.ventaItemResponse = response;
       let arrayAuxVentaItem = <any>response.data;
@@ -72,7 +76,7 @@ export class VentaItemMostrarComponent implements OnInit {
   }
 
   buildDetalleVentas(element, arrayAuxDetalles, index){
-    this.serviceItem.getItemById(element.idItem).subscribe(
+    this.serviceItemMostrar.getItemById(element.idItem).subscribe(
       response => {
         this.itemResponse = response;
         this.arrayItems = this.itemResponse.data;
@@ -91,6 +95,29 @@ export class VentaItemMostrarComponent implements OnInit {
         this.ventaTotal = this.ventaTotal + priceItem*quantityItem;
       }
     )
+  }
 
+  ventaItemEliminar(ventaItemId){
+    this.serviceVentaItemEliminar.deleteVentaItem(ventaItemId).subscribe(
+      response => {
+        this.ventaItemResponse = response;
+        alert(this.ventaItemResponse.textMessage)
+        this.pageRefresh();
+      } , 
+      error => {
+        console.log(error);
+        this.ventaItemResponse = error.error;
+        if (this.ventaItemResponse.textMessage != undefined){
+          console.log(this.ventaItemResponse.textMessage);
+          alert(this.ventaItemResponse.textMessage)
+        }  else {
+          alert(this.errorMessage)
+        }
+      }
+    )
+  }
+
+  pageRefresh() {
+    location.reload();
   }
 }

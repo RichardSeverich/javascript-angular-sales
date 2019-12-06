@@ -4,8 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Prerequisites  🚀
 1. Install Windows 10
-2. Install node.js version 10.16.3
-3. Install npm version 6.9.0
+2. Install node.js version v8.9.4
+3. Install npm version 5.6.0
 4. (No mandatory) Install angular-cli version 7.3.9.
 5. Install google Chrome 64 Bits Version 64.0
 6. Install "Allow CORS: Access-Control-Allow-Origin" Plugin for Chrome.

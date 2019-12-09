@@ -10,6 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 5. Install google Chrome 64 Bits Version 64.0
 6. Install "Allow CORS: Access-Control-Allow-Origin" Plugin for Chrome.
 7. Install "Augury" Plugin for Chrome.
+8. Start google with win run: chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
 
 ## Installation 🔧
 1. Clone Repository: https://stash.pros.com/projects/OND/repos/rm-nightwatch/browse

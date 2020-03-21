@@ -87,13 +87,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ### Sales Table Items
 
 <p align="center">
-  <img src="documentation/ui-sales-items.jpg">
+  <img src="documentation/ui-sales-table-items.jpg">
 </p>
 
 ### Sales Table Details
 
 <p align="center">
-  <img src="documentation/ui-sales-details.jpg">
+  <img src="documentation/ui-sales-table-details.jpg">
 </p>
 
 ## Diagrams

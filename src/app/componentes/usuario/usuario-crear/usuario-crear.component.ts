@@ -1,30 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 // Services
-import { UsuarioCrearService } from 'src/app/servicios/usuario/usuario-crear.service';
+import { UsuarioCrearService } from "src/app/servicios/usuario/usuario-crear.service";
 // Models
-import { UserResponse } from 'src/app/modelos/UserResponse';
-import { User } from 'src/app/modelos/User';
-
+import { UserResponse } from "src/app/modelos/UserResponse";
+import { User } from "src/app/modelos/User";
 
 @Component({
-  selector: 'app-usuario-crear',
-  templateUrl: './usuario-crear.component.html',
-  styleUrls: ['./usuario-crear.component.css']
+  selector: "app-usuario-crear",
+  templateUrl: "./usuario-crear.component.html",
+  styleUrls: ["./usuario-crear.component.css"]
 })
 export class UsuarioCrearComponent implements OnInit {
+  user: User;
+  userResponse: UserResponse;
+  errorValidation = "Error, validation error";
+  errorMessage = "Error, please contact your administrator";
 
-  user:User;
-  userResponse:UserResponse;
-  errorValidation="Error, validation error";
-  errorMessage="Error, please contact your administrator";
+  constructor(private router: Router, private service: UsuarioCrearService) {}
 
-  constructor(private router:Router, private service:UsuarioCrearService) { }
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  usuarioCrear(id, password, name, lastName, birthDate, email, type){
+  usuarioCrear(id, password, name, lastName, birthDate, email, type) {
     this.user = new User();
     this.user.id = id;
     this.user.password = password;
@@ -34,33 +31,34 @@ export class UsuarioCrearComponent implements OnInit {
     this.user.email = email;
     this.user.type = type;
     this.service.createUser(this.user).subscribe(
-      data=> {
+      data => {
         console.log(data);
         alert("Se creo con exito");
-        this.router.navigate(["usuario-mostrar"])
+        this.router.navigate(["usuario-mostrar"]);
       },
       error => {
         console.log(error);
         this.userResponse = error.error;
-        if (this.userResponse.textMessage != undefined){
+        if (this.userResponse.textMessage != undefined) {
           console.log(this.userResponse.textMessage);
-          alert(this.userResponse.textMessage)
-        } else if (error.error.errors != undefined){
+          alert(this.userResponse.textMessage);
+        } else if (error.error.errors != undefined) {
           let validationMessage = this.errorValidation + "\n";
-          for (let x=0;x<error.error.errors.length;x++){
-            validationMessage = validationMessage + error.error.errors[x].field + " ";
-            validationMessage = validationMessage + error.error.errors[x].defaultMessage + "\n";
+          for (let x = 0; x < error.error.errors.length; x++) {
+            validationMessage =
+              validationMessage + error.error.errors[x].field + " ";
+            validationMessage =
+              validationMessage + error.error.errors[x].defaultMessage + "\n";
           }
-          alert(validationMessage)
+          alert(validationMessage);
         } else {
-          alert(this.errorMessage)
+          alert(this.errorMessage);
         }
       }
-    )
+    );
   }
 
-  usuarioCancelar(){
-    this.router.navigate(["usuario-mostrar"])
+  usuarioCancelar() {
+    this.router.navigate(["usuario-mostrar"]);
   }
-
 }

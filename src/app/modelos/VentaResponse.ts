@@ -1,5 +1,5 @@
-import { Venta } from 'src/app/modelos/Venta';
+import { Venta } from "src/app/modelos/Venta";
 export class VentaResponse {
-    data:Venta[];
-    textMessage:String;
+  data: Venta[];
+  textMessage: String;
 }

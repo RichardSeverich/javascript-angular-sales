@@ -1,5 +1,5 @@
-import { Item } from 'src/app/modelos/Item';
+import { Item } from "src/app/modelos/Item";
 export class ItemResponse {
-    data:Item[];
-    textMessage:String;
+  data: Item[];
+  textMessage: String;
 }

@@ -4,53 +4,89 @@
 </p>
 <div class="container col-md-3">
   <div class="card">
-      <div class="card-header">
-        <h3 align="center">
-          Usuarios
-        </h3>
-      </div>
-      <div class="card-body">
-        <form action="">
-          <div class="form-group">
-            <label for="">Id</label>
-            <input #id type="text" class="form-control" maxlength="7">
-          </div>
-          <div class="form-group">
-              <label for="">Contraseña</label>
-              <input #password type="password" class="form-control" minlength="3" maxlength="10">
-          </div>
-          <div class="form-group">
-              <label for="">Nombres</label>
-              <input #name type="text" class="form-control" minlength="3" maxlength="10">
-          </div>
-          <div class="form-group">
-              <label for="">Apellidos</label>
-              <input #lastName type="text" class="form-control" minlength="3" maxlength="10">
-          </div>
-          <div class="form-group">
-              <label for="">Fecha nacimiento</label>
-              <input #birthDate type="date" class="form-control">
-          </div>
-          <div class="form-group">
-              <label for="">Correo</label>
-              <input #email type="text" class="form-control" maxlength="30">
-          </div>
-          <div class="form-group">
-              <label for="">Tipo</label>
-              <select #type class="custom-select custom-select-sm">
-                  <option value = "admin">Administrador</option>
-                  <option value = "seller">Vendedor</option>
-                  <option value = "client">Cliente</option>
-              </select>
-          </div>
-          <div class="text-center">
-            <button 
-              (click)="usuarioCrear(id.value, password.value, name.value, lastName.value, birthDate.value, email.value, type.value)" 
-              class="btn btn-success">Registrar
-            </button>
-            <button (click)="usuarioCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
-          </div>
-        </form>
-      </div>
+    <div class="card-header">
+      <h3 align="center">
+        Usuarios
+      </h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Id</label>
+          <input #id type="text" class="form-control" maxlength="7" />
+        </div>
+        <div class="form-group">
+          <label for="">Contraseña</label>
+          <input
+            #password
+            type="password"
+            class="form-control"
+            minlength="3"
+            maxlength="10"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Nombres</label>
+          <input
+            #name
+            type="text"
+            class="form-control"
+            minlength="3"
+            maxlength="10"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Apellidos</label>
+          <input
+            #lastName
+            type="text"
+            class="form-control"
+            minlength="3"
+            maxlength="10"
+          />
+        </div>
+        <div class="form-group">
+          <label for="">Fecha nacimiento</label>
+          <input #birthDate type="date" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="">Correo</label>
+          <input #email type="text" class="form-control" maxlength="30" />
+        </div>
+        <div class="form-group">
+          <label for="">Tipo</label>
+          <select #type class="custom-select custom-select-sm">
+            <option value="admin">Administrador</option>
+            <option value="seller">Vendedor</option>
+            <option value="client">Cliente</option>
+          </select>
+        </div>
+        <div class="text-center">
+          <button
+            (click)="
+              usuarioCrear(
+                id.value,
+                password.value,
+                name.value,
+                lastName.value,
+                birthDate.value,
+                email.value,
+                type.value
+              )
+            "
+            class="btn btn-success"
+          >
+            Registrar
+          </button>
+          <button
+            (click)="usuarioCancelar()"
+            class="btn btn-info"
+            style="margin-left: 24px"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

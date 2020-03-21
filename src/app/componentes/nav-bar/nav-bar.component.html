@@ -1,50 +1,122 @@
 <nav class="navbar navbar-expand-sm bg-info navbar-dark">
   <ul class="navbar-nav">
     <div class="btn-group">
-      <button (click)="navigateDashboard()" type="button" class="btn btn-info" aria-haspopup="true" aria-expanded="false">
+      <button
+        (click)="navigateDashboard()"
+        type="button"
+        class="btn btn-info"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
         Inicio
       </button>
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Adm. Usuarios
+      <button
+        type="button"
+        class="btn btn-info dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Adm. Usuarios
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button
+          (click)="navigateUsuarioMostrar()"
+          class="dropdown-item"
+          type="button"
+        >
+          Mostrar
         </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button (click)="navigateUsuarioMostrar()" class="dropdown-item" type="button">Mostrar</button>
-          <button (click)="navigateUsuarioCrear()" class="dropdown-item" type="button">Crear</button>
-        </div>
+        <button
+          (click)="navigateUsuarioCrear()"
+          class="dropdown-item"
+          type="button"
+        >
+          Crear
+        </button>
+      </div>
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Adm. Items
+      <button
+        type="button"
+        class="btn btn-info dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Adm. Items
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button
+          (click)="navigateItemMostrar()"
+          class="dropdown-item"
+          type="button"
+        >
+          Mostrar
         </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button  (click)="navigateItemMostrar()" class="dropdown-item" type="button">Mostrar</button>
-          <button  (click)="navigateItemCrear()" class="dropdown-item" type="button">Crear</button>
-        </div>
+        <button
+          (click)="navigateItemCrear()"
+          class="dropdown-item"
+          type="button"
+        >
+          Crear
+        </button>
+      </div>
     </div>
 
     <div class="btn-group">
-        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Adm. Ventas
+      <button
+        type="button"
+        class="btn btn-info dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Adm. Ventas
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button
+          (click)="navigateVentaMostrar()"
+          class="dropdown-item"
+          type="button"
+        >
+          Mostrar
         </button>
-        <div class="dropdown-menu dropdown-menu-right">
-          <button  (click)="navigateVentaMostrar()" class="dropdown-item" type="button">Mostrar</button>
-          <button  (click)="navigateVentaCrear()" class="dropdown-item" type="button">Crear</button>
-        </div>
+        <button
+          (click)="navigateVentaCrear()"
+          class="dropdown-item"
+          type="button"
+        >
+          Crear
+        </button>
+      </div>
     </div>
   </ul>
   <ul class="navbar-nav ml-auto">
-      <div class="btn-group">
-          <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Opciones
-          </button>
-          <div class="dropdown-menu dropdown-menu-right">
-            <button  class="dropdown-item" type="button">Conf Gral Sistema</button>
-            <button  (click)="navigateLoginPage()" class="dropdown-item" type="button">Salir</button>
-          </div>
+    <div class="btn-group">
+      <button
+        type="button"
+        class="btn btn-info dropdown-toggle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Opciones
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">Conf Gral Sistema</button>
+        <button
+          (click)="navigateLoginPage()"
+          class="dropdown-item"
+          type="button"
+        >
+          Salir
+        </button>
       </div>
+    </div>
   </ul>
 </nav>

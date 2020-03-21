@@ -2,20 +2,119 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Prerequisites  🚀
+## Prerequisites 🚀
+
 1. Install Windows 10
 2. Install node.js version v8.9.4
 3. Install npm version 5.6.0
 4. (No mandatory) Install angular-cli version 7.3.9.
-5. Install google Chrome 64 Bits Version 64.0
-6. Install "Allow CORS: Access-Control-Allow-Origin" Plugin for Chrome.
-7. Install "Augury" Plugin for Chrome.
-8. Start google with win run: chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
+5. Install google Chrome 64 Bits Version 64.0 or IE11
+
+## Google Chrome 64
+
+1. Install "Allow CORS: Access-Control-Allow-Origin" Plugin for Chrome.
+2. Install "Augury" Plugin for Chrome.
+3. Start google with win run: chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security
+
+<p align="center">
+  <img src="documentation/chrome-conf.jpg">
+</p>
+
+## IE11
+
+1. Do the following configuration.
+
+<p align="center">
+  <img src="documentation/ie-conf.jpg">
+</p>
 
 ## Installation 🔧
+
 1. Clone Repository: https://stash.pros.com/projects/OND/repos/rm-nightwatch/browse
 2. Install Dependencies: npm install
 3. Configuration: Set the api host and port to: src/environments/environment.ts
+
+## Screens
+
+### Login
+
+<p align="center">
+  <img src="documentation/ui-login.jpg">
+</p>
+
+### Nav Bar
+
+<p align="center">
+  <img src="documentation/ui-nav-bar.jpg">
+</p>
+
+### Users Table
+
+<p align="center">
+  <img src="documentation/ui-users-table.jpg">
+</p>
+
+### Users Form
+
+<p align="center">
+  <img src="documentation/ui-users-form.jpg">
+</p>
+
+### Items Table
+
+<p align="center">
+  <img src="documentation/ui-items-table.jpg">
+</p>
+
+### Items Form
+
+<p align="center">
+  <img src="documentation/ui-items-form.jpg">
+</p>
+
+### Sales Table
+
+<p align="center">
+  <img src="documentation/ui-sales-table.jpg">
+</p>
+
+### Sales Form
+
+<p align="center">
+  <img src="documentation/ui-sales-form.jpg">
+</p>
+
+### Sales Table Items
+
+<p align="center">
+  <img src="documentation/ui-sales-items.jpg">
+</p>
+
+### Sales Table Details
+
+<p align="center">
+  <img src="documentation/ui-sales-details.jpg">
+</p>
+
+## Diagrams
+
+### Flow
+
+<p align="center">
+  <img src="documentation/diagram-flow.jpg">
+</p>
+
+### Descriptions
+
+<p align="center">
+  <img src="documentation/diagram-description.jpg">
+</p>
+
+### Structure
+
+<p align="center">
+  <img src="documentation/diagram-componets-structure.jpg">
+</p>
 
 ## Development server
 
@@ -50,9 +149,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 5. Submit a pull request.
 
 ## License 📄
-* Copyright (c) 2019 by Easy-Code, Inc.  All Rights Reserved.
-* This software is the confidential and proprietary information of
-* Easy-Code, Inc. ("Confidential Information").
-* You may not disclose such Confidential Information, and may only
-* use such Confidential Information in accordance with the terms of
-* the license agreement you entered into with Easy-Code.
+
+- Copyright (c) 2019 by Easy-Code, Inc. All Rights Reserved.
+- This software is the confidential and proprietary information of
+- Easy-Code, Inc. ("Confidential Information").
+- You may not disclose such Confidential Information, and may only
+- use such Confidential Information in accordance with the terms of
+- the license agreement you entered into with Easy-Code.

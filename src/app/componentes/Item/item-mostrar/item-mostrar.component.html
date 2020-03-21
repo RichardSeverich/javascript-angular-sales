@@ -4,32 +4,36 @@
 </p>
 <div class="container">
   <div class="card">
-      <div class="card-header">
-        <h3 align="center">
-          Items
-        </h3>
-      </div>
-      <div class="card-body">
-          <table id="table-items" class="table table-hover">
-            <thead>
-              <tr class="text-center">
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Stock</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let item of arrayItems" class="text-center">
-                  <td>{{item.id}}</td>
-                  <td>{{item.name}}</td>
-                  <td>{{item.price}}</td>
-                  <td>{{item.stock}}</td>
-                  <td> <button class="btn btn-warning">Editar</button> </td>
-                  <td> <button (click)="itemEliminar(item.id)" class="btn btn-danger">Eliminar</button> </td>
-                </tr>
-            </tbody>
-          </table>
-      </div>
+    <div class="card-header">
+      <h3 align="center">
+        Items
+      </h3>
+    </div>
+    <div class="card-body">
+      <table id="table-items" class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of arrayItems" class="text-center">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.stock }}</td>
+            <td><button class="btn btn-warning">Editar</button></td>
+            <td>
+              <button (click)="itemEliminar(item.id)" class="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

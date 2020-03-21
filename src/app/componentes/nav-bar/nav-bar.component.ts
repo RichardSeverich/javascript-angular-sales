@@ -1,42 +1,39 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-nav-bar',
-  templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  selector: "app-nav-bar",
+  templateUrl: "./nav-bar.component.html",
+  styleUrls: ["./nav-bar.component.css"]
 })
 export class NavBarComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router:Router){}
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  navigateUsuarioMostrar(){
+  navigateUsuarioMostrar() {
     this.router.navigate(["usuario-mostrar"]);
   }
-  navigateUsuarioCrear(){
+  navigateUsuarioCrear() {
     this.router.navigate(["usuario-crear"]);
   }
 
-  navigateItemMostrar(){
+  navigateItemMostrar() {
     this.router.navigate(["item-mostrar"]);
   }
-  navigateItemCrear(){
+  navigateItemCrear() {
     this.router.navigate(["item-crear"]);
   }
-  navigateVentaMostrar(){
+  navigateVentaMostrar() {
     this.router.navigate(["venta-mostrar"]);
   }
-  navigateVentaCrear(){
+  navigateVentaCrear() {
     this.router.navigate(["venta-crear"]);
   }
-  navigateDashboard(){
+  navigateDashboard() {
     this.router.navigate(["nav-bar"]);
   }
-  navigateLoginPage(){
+  navigateLoginPage() {
     this.router.navigate(["login"]);
   }
-
 }

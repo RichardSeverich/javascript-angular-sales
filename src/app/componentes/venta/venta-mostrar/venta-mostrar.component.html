@@ -4,34 +4,52 @@
 </p>
 <div class="container">
   <div class="card">
-      <div class="card-header">
-        <h3 align="center">
-          Ventas
-        </h3>
-      </div>
-      <div class="card-body">
-          <table class="table table-hover">
-            <thead>
-              <tr class="text-center">
-                <th>Id</th>
-                <th>Id Vendedor</th>
-                <th>Id Cliente</th>
-                <th>Fecha</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let venta of arrayVentas" class="text-center">
-                  <td>{{venta.id}}</td>
-                  <td>{{venta.idSeller}}</td>
-                  <td>{{venta.idClient}}</td>
-                  <td>{{venta.date}}</td>
-                  <td> <button (click)="navigateVentaItemCrear(venta)"  class="btn btn-success">Items</button> </td>
-                  <td> <button (click)="navigateVentaItemMostrar(venta)" class="btn btn-info">Detalle</button> </td>
-                  <td> <button class="btn btn-warning">Editar</button> </td>
-                  <td> <button (click)="ventaEliminar(venta.id)" class="btn btn-danger">Eliminar</button> </td>
-                </tr>
-            </tbody>
-          </table>
-      </div>
+    <div class="card-header">
+      <h3 align="center">
+        Ventas
+      </h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>Id</th>
+            <th>Id Vendedor</th>
+            <th>Id Cliente</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let venta of arrayVentas" class="text-center">
+            <td>{{ venta.id }}</td>
+            <td>{{ venta.idSeller }}</td>
+            <td>{{ venta.idClient }}</td>
+            <td>{{ venta.date }}</td>
+            <td>
+              <button
+                (click)="navigateVentaItemCrear(venta)"
+                class="btn btn-success"
+              >
+                Items
+              </button>
+            </td>
+            <td>
+              <button
+                (click)="navigateVentaItemMostrar(venta)"
+                class="btn btn-info"
+              >
+                Detalle
+              </button>
+            </td>
+            <td><button class="btn btn-warning">Editar</button></td>
+            <td>
+              <button (click)="ventaEliminar(venta.id)" class="btn btn-danger">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

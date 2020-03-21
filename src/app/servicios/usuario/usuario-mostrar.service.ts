@@ -1,24 +1,22 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { UserResponse } from 'src/app/modelos/UserResponse';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { HttpHeaders } from "@angular/common/http";
+import { environment } from "src/environments/environment";
+import { UserResponse } from "src/app/modelos/UserResponse";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
-
 export class UsuarioMostrarService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) { }
-  
-  Url=environment.apiUrl + '/api/v1/users'
-  
-  getUser(){
+  Url = environment.apiUrl + "/api/v1/users";
+
+  getUser() {
     //let headers: HttpHeaders = new HttpHeaders();
     //headers = headers.append('Content-Type', 'application/json');
     //headers = headers.append('Access-Control-Allow-Origin', '*');
     //return this.http.get<UserResponse>(this.Url, { headers })
-    return this.http.get<UserResponse>(this.Url)
+    return this.http.get<UserResponse>(this.Url);
   }
 }

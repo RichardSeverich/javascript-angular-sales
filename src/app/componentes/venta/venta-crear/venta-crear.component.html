@@ -4,33 +4,42 @@
 </p>
 <div class="container col-md-3">
   <div class="card">
-      <div class="card-header">
-        <h3 align="center">
-          Ventas
-        </h3>
-      </div>
-      <div class="card-body">
-        <form action="">
-          <div class="form-group">
-              <label for="">Id Vendedor</label>
-              <input #idSeller type="text" class="form-control" maxlength="7">
-          </div>
-          <div class="form-group">
-              <label for="">Id Cliente</label>
-              <input #idClient type="text" class="form-control" maxlength="7">
-          </div>
-          <div class="form-group">
-              <label for="">Fecha de venta</label>
-              <input #date type="date" class="form-control">
-          </div>
-          <div class="text-center">
-            <button (click)="ventaCrear(idSeller.value, idClient.value, date.value)" 
-              class="btn btn-success" style="margin-left: 24px">
-              Registrar
-            </button>
-            <button (click)="ventaCancelar()" class="btn btn-info" style="margin-left: 24px">Cancelar</button>
-          </div>
-        </form>
-      </div>
+    <div class="card-header">
+      <h3 align="center">
+        Ventas
+      </h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="">Id Vendedor</label>
+          <input #idSeller type="text" class="form-control" maxlength="7" />
+        </div>
+        <div class="form-group">
+          <label for="">Id Cliente</label>
+          <input #idClient type="text" class="form-control" maxlength="7" />
+        </div>
+        <div class="form-group">
+          <label for="">Fecha de venta</label>
+          <input #date type="date" class="form-control" />
+        </div>
+        <div class="text-center">
+          <button
+            (click)="ventaCrear(idSeller.value, idClient.value, date.value)"
+            class="btn btn-success"
+            style="margin-left: 24px"
+          >
+            Registrar
+          </button>
+          <button
+            (click)="ventaCancelar()"
+            class="btn btn-info"
+            style="margin-left: 24px"
+          >
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

@@ -1,38 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 // Services
-import { LoginService } from 'src/app/servicios/login/login.service';
+import { LoginService } from "src/app/servicios/login/login.service";
 // Models
-import { User } from 'src/app/modelos/User';
-import { UserResponse } from 'src/app/modelos/UserResponse';
-
+import { User } from "src/app/modelos/User";
+import { UserResponse } from "src/app/modelos/UserResponse";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
+  constructor(private router: Router, private service: LoginService) {}
 
-  constructor(private router:Router, private service:LoginService){}
+  arrayUsers: User[];
+  userResponse: UserResponse;
+  message = "user or password incorrect";
+  errorMessage = "Error, please contact your administrator";
 
-  arrayUsers:User[];
-  userResponse:UserResponse;
-  message="user or password incorrect";
-  errorMessage="Error, please contact your administrator";
+  ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  navigateDashboard(username, password){
-    if(username!="" && password!=""){
-     this._userAuthentication(username, password);
+  navigateDashboard(username, password) {
+    if (username != "" && password != "") {
+      this._userAuthentication(username, password);
     } else {
       alert(this.message);
     }
   }
 
-  _userAuthentication(username, password){
+  _userAuthentication(username, password) {
     this.service.getUserById(username).subscribe(
       response => {
         console.log(response);
@@ -43,25 +40,23 @@ export class LoginComponent implements OnInit {
       error => {
         console.log(error);
         this.userResponse = error.error;
-        if (this.userResponse.textMessage != undefined){
+        if (this.userResponse.textMessage != undefined) {
           console.log(this.userResponse.textMessage);
-          alert(this.message)
+          alert(this.message);
         } else {
-          alert(this.errorMessage)
-          
+          alert(this.errorMessage);
         }
       }
     );
   }
 
-  _userValidation(username, password){
+  _userValidation(username, password) {
     for (let user of this.arrayUsers) {
-      if(user.id==username &&  user.password==password){
+      if (user.id == username && user.password == password) {
         this.router.navigate(["nav-bar"]);
       } else {
         alert(this.message);
       }
     }
   }
-
 }

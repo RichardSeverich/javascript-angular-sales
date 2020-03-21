@@ -30,9 +30,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Installation 🔧
 
-1. Clone Repository: https://stash.pros.com/projects/OND/repos/rm-nightwatch/browse
-2. Install Dependencies: npm install
+1. Deploy the following backend project: https://github.com/RichardSeverich/java-spring-sales
+2. Clone Repository: https://github.com/RichardSeverich/javascript-angular-sales.git
 3. Configuration: Set the api host and port to: src/environments/environment.ts
+4. Install Dependencies: npm install
 
 ## Screens
 
@@ -150,9 +151,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## License 📄
 
-- Copyright (c) 2019 by Easy-Code, Inc. All Rights Reserved.
+- Copyright (c) 2019 by Richard Severich, Inc. All Rights Reserved.
 - This software is the confidential and proprietary information of
-- Easy-Code, Inc. ("Confidential Information").
+- Richard Severich. ("Confidential Information").
 - You may not disclose such Confidential Information, and may only
 - use such Confidential Information in accordance with the terms of
-- the license agreement you entered into with Easy-Code.
+- the license agreement you entered into with Richard Severich.
